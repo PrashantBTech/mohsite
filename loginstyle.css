@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.container {
+
+    padding: 2%;
+    background: #fff;
+    display: flex;
+    width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.login-section, .signup-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-section {
+    width: 60%;
+    background-color: #ffffff;
+}
+
+.signup-section {
+    width: 40%;
+    background: url('loginpic.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="email"], input[type="password"],input[type="text"]{
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px;
+    background-color: #d4af37;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b98c2e;
+}
+
+.forgot-password, .connect-facebook {
+    color: #333;
+    text-decoration: none;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.connect-facebook {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-section button {
+    background: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.signup-section button:hover {
+    background: white;
+    color: #d4af37;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .signup-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .login-section {
+        width: 100%;
+    }
+}
+.signup-box {
+    flex: 1;
+    background: url('loginpic.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 5px;
+  
+    
+}
+/* Create a blur effect using an overlay */

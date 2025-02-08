@@ -1,0 +1,292 @@
+/* General Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b0b16;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Header and Navbar Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    padding: 0px;
+    margin: -17px;
+    height: 87px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Link Styling */
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00d4ff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 10px;
+}
+
+/* Hamburger Icon Bars */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Initially hide the nav links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a2e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Show when active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Display hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+/* Main Content */
+main h1 {
+    font-size: 36px;
+    margin: 20px 0 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main p {
+    font-size: 18px;
+    color: #ccc;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    animation: floatUp 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Styles */
+.btn {
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+/* Button Colors with Gradient */
+.talk {
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    color: white;
+}
+
+.chat {
+    background: linear-gradient(135deg, #8bc34a, #cddc39);
+    color: white;
+}
+
+.search {
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    color: white;
+}
+
+/* Hover Effects */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Glowing Animation */
+.btn:active {
+    animation: glow 0.5s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #fff;
+    }
+    100% {
+        box-shadow: 0 0 20px #fff, 0 0 30px #fff;
+    }
+}
+
+/* Logo Animation */
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+
+
+/* Footer Floating */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a2e;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.nav-icons {
+    font-size: 24px;
+    color: #c084fc;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-icons:hover {
+    transform: scale(1.2) rotate(20deg);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 150px;
+    }
+}
+/* Logo Container */
+.logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Blurred Logo Image */
+.logo-blur {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    filter: blur(1.5px); /* Soft blur effect */
+    opacity: 0.8;      /* Light transparency for elegance */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hover Effect for Subtle Focus */
+.logo-blur:hover {
+    filter: blur(.7px);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Tagline Text */
+.logo-container p {
+    font-size: 22px;
+    color: #e5e5e5;
+    margin-top: -40px; /* Overlapping effect */
+    background: rgba(0, 0, 0, 0.5); /* Slight dark overlay for contrast */
+    padding: 5px 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    
+}
